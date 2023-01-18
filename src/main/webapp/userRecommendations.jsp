@@ -40,7 +40,7 @@
             <td>
                 <form method="POST" action="${pageContext.request.contextPath}/download" class="text-center">
                     <input type="submit" class="btn btn-dark" value="Download"/>
-                    <input type="hidden" name="book_id" value="<c:out value="${book.id}"/>">
+                    <input type="hidden" name="book_id" value="<c:out value="${book.getId()}"/>">
                 </form>
             </td>
         </tr>

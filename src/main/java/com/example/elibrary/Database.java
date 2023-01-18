@@ -62,4 +62,21 @@ public class Database {
 
         stmt.executeUpdate(strAdd);
     }
+    public ResultSet getBorrowedBooks(int user_id) throws Exception{
+        Statement stmt = con.createStatement();
+
+        String strSelect = "select * from books inner join books_borrowed on books.id = books_borrowed.book_id where user_id=" + user_id;
+
+        return stmt.executeQuery(strSelect);
+    }
+
+    public ResultSet getBookByGenre(String genre, int userID) throws Exception{
+        Statement stmt = con.createStatement();
+
+        String strSelect = "select * from books where genre='" + genre + "' " +
+                "and books.id not in (select books.id from books inner join books_borrowed on books.id = books_borrowed.book_id " +
+                "where user_id=" + userID + ") order by rand()";
+
+        return stmt.executeQuery(strSelect);
+    }
 }

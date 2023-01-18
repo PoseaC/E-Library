@@ -13,7 +13,7 @@
 </head>
 <body>
     <h2><i>Sign up</i></h2>
-    <form method="POST" action="${pageContext.request.contextPath}/signup" class="form text-center" onsubmit="return submitData()">
+    <form method="POST" action="${pageContext.request.contextPath}/signup" class="form text-center">
         <div class="form-group">
           <label for="username">Username:</label>
           <input type="text" class="form-control" id="username" name="username" required>
