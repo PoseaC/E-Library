@@ -15,13 +15,13 @@
                 var="database"
                 driver="com.mysql.cj.jdbc.Driver"
                 url="jdbc:mysql://localhost:3306/library"
-                user="root" password="Posea"
+                user="root" password="root"
         />
         <sql:query var="books" dataSource="${database}">
             SELECT * FROM books WHERE title LIKE '%${param.keyword}%'
-                                        OR author LIKE '%${param.keyword}%'
-                                        OR genre LIKE '%${param.keyword}%'
-                                        OR description LIKE '%${param.keyword}%';
+                                OR author LIKE '%${param.keyword}%'
+                                OR genre LIKE '%${param.keyword}%'
+                                OR description LIKE '%${param.keyword}%';
         </sql:query>
         <%@include file="navbar.jsp"%>
         <table class="table table-striped text-center">

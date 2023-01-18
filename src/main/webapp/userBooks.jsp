@@ -15,7 +15,7 @@
         var="database"
         driver="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost:3306/library"
-        user="root" password="Posea"
+        user="root" password="root"
 />
 <sql:query var="books" dataSource="${database}">
     SELECT * FROM books INNER JOIN books_borrowed ON books.id=books_borrowed.book_id WHERE user_id=${cookie["UserID"].value};

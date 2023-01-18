@@ -24,7 +24,7 @@ public class AddBook extends HttpServlet {
             String filename = filePart.getSubmittedFileName();
             String genre = request.getParameter("genre");
 
-            filePart.write("C:\\Users\\catal\\OneDrive\\Desktop\\Facultate\\E-Library\\src\\main\\webapp\\Books\\"
+            filePart.write("C:\\Users\\mincu\\OneDrive\\Documents\\Teme_si_documente\\An4Sem1\\SDT\\project2\\E-Library\\src\\main\\webapp\\Books"
                             + title + author + filename);
             Database.instance.addBook(title, description, author, pages, filename, genre);
             response.sendRedirect(request.getContextPath() + "/adminMenu.jsp");

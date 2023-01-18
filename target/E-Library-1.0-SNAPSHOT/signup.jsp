@@ -10,36 +10,21 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
     <title>E-Library</title>
-    <script>
-        function submitData() {
-            const name = $("#username").val();
-            const pass = $("#password").val();
-            const confirmPass = $("#passwordConfirm").val();
-            if(name === "" || pass === "" || confirmPass === "") {
-                alert("All fields must be completed");
-                return false;
-            } else if(pass !== confirmPass){
-                alert("Password don't match");
-                return false;
-            } else
-                return true;
-        }
-    </script>
 </head>
 <body>
     <h2><i>Sign up</i></h2>
     <form method="POST" action="${pageContext.request.contextPath}/signup" class="form text-center" onsubmit="return submitData()">
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" class="form-control" id="username" name="username">
+          <input type="text" class="form-control" id="username" name="username" required>
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" class="form-control" id="password" name="password">
+          <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <div class="form-group">
           <label for="password">Confirm password:</label>
-          <input type="password" class="form-control" id="passwordConfirm">
+          <input type="password" class="form-control" id="passwordConfirm" required>
         </div>
         <div class="form-group">
             <input type="radio" id="user" name="type" value="user" checked>

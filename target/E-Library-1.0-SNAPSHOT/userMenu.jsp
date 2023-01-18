@@ -11,15 +11,12 @@
     <title>E-Library</title>
 </head>
 <body>
-    <sql:setDataSource
-            var="database"
-            driver="com.mysql.cj.jdbc.Driver"
-            url="jdbc:mysql://localhost:3306/library"
-            user="root" password="Posea"
-    />
     <%@include file="navbar.jsp"%>
     <div class="text-center" style="margin-top: 25px">
         <a href="userBooks.jsp" class="btn btn-outline-dark">My Books</a>
+    </div>
+    <div class="text-center" style="margin-top: 25px">
+        <a href="${pageContext.request.contextPath}/recommend" class="btn btn-outline-dark">Recommendations</a>
     </div>
 </body>
 </html>
