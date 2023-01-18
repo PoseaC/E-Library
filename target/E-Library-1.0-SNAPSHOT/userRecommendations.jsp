@@ -15,11 +15,7 @@
         var="database"
         driver="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost:3306/library"
-<<<<<<< HEAD
         user="root" password="root"
-=======
-        user="root" password="Posea"
->>>>>>> 491cf53c2a94c6d3ef9f6d531a9dd6d74ba185b5
 />
 <%@include file="navbar.jsp"%>
 <table class="table table-striped text-center">
@@ -44,11 +40,7 @@
             <td>
                 <form method="POST" action="${pageContext.request.contextPath}/download" class="text-center">
                     <input type="submit" class="btn btn-dark" value="Download"/>
-<<<<<<< HEAD
-                    <input type="hidden" name="book_id" value="<c:out value="${book.id}"/>">
-=======
                     <input type="hidden" name="book_id" value="<c:out value="${book.getId()}"/>">
->>>>>>> 491cf53c2a94c6d3ef9f6d531a9dd6d74ba185b5
                 </form>
             </td>
         </tr>
